@@ -24,8 +24,11 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/common/header.php'); ?>
                     <a href="register.php" id="createlogin">Create an account</a>
                 </div>
             </div>
+            <div class="row">
+            <h2>Sign in using gmail</h2>
             <div class="g-signin2 col-sm-4" data-onsuccess="onSignIn"></div>
           </div>
+        </div>
     </div>
 </form>
 </div>
@@ -52,11 +55,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/common/header.php'); ?>
                 type: 'post',
                 datatype: 'json',
                 success: function (output) {
-                    var response = JSON.parse(output);
-                    if(response.flag)
-                    {
                         window.location.assign('/vote');
-                    }
                 }
             });
         }

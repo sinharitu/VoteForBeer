@@ -5,7 +5,7 @@ include_once '../common/functions.php';
 
 $name = $_POST['name'];
 $password = generatePasswordHash('password');
-$username = str_replace(' ', $name);
+$username = str_replace(' ','', $name);
 $email = $_POST['email'];
 $image_url = $_POST['image_url'];
 $isGmail = 1;
@@ -16,6 +16,8 @@ if (!getUserByEmail($votingDb, $email)) {
 
     if (!$flag) {
         $output = json_encode(['flag' => false, 'message' => 'Error creating user record']);
+        echo $output;
+        return;
     }
 } else {
     $_SESSION['loggedin'] = 1;
@@ -23,6 +25,9 @@ if (!getUserByEmail($votingDb, $email)) {
     $user = $votingDb->query(sprintf($query, $email))->fetch_row();
     $_SESSION['userid'] = array_shift($user);
     $output = json_encode(['flag' => true, 'message' => 'Logged in successfully']);
+    echo $output;
+    return;
 }
+?>
 
-echo $output;
+
