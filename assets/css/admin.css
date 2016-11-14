@@ -1,0 +1,77 @@
+body {
+    color: #41362f;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.36;
+}
+
+.data-grid {
+    border: medium none;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+table {
+    background-color: transparent;
+    color: #303030;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.data-grid thead {
+    background-color: transparent;
+}
+
+.data-grid th {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #514943;
+    border-color: #8a837f #8a837f #8a837f transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0;
+    text-align: left;
+}
+
+.data-grid th, .data-grid td {
+    font-size: 1.3rem;
+    line-height: 1.36;
+    transition: background-color 0.1s linear 0s;
+    vertical-align: top;
+}
+
+td, th {
+    padding: 0;
+}
+
+.buttonAlign {
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+.adminClass {
+    height: 20px;
+}
+
+.data-grid td {
+    background-color: #ffffff;
+    border-left: 0.1rem dashed #d6d6d6;
+    border-right: 0.1rem dashed #d6d6d6;
+    color: #303030;
+    padding: 1rem;
+}
+
+.data-grid th, .data-grid td {
+    font-size: 1.3rem;
+    line-height: 1.36;
+    transition: background-color 0.1s linear 0s;
+    vertical-align: top;
+}
