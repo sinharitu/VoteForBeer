@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 include($_SERVER['DOCUMENT_ROOT'] . '/common/header.php');
 
 $result = getAllUsers($votingDb);
@@ -24,17 +22,17 @@ if ($allUsers){
         <tbody>
         <?php foreach ($allUsers as $user) { ?>
             <tr>
-                <td><? echo $user[0] ?></td>
-                <td><? echo $user[1] ?></td>
-                <td><? echo $user[2] ?></td>
-                <td><? echo $user[4] ?></td>
-                <td><? echo $user[7] ? 'yes' : 'no'; ?></td>
-                <td><? echo date('m/d/y', $user[6]); ?></td>
+                <td><?php echo $user[0] ?></td>
+                <td><?php echo $user[1] ?></td>
+                <td><?php echo $user[2] ?></td>
+                <td><?php echo $user[4] ?></td>
+                <td><?php echo $user[7] ? 'yes' : 'no'; ?></td>
+                <td><?php echo date('m/d/y', $user[6]); ?></td>
             </tr>
-        <? } ?>
+        <?php } ?>
         </tbody>
     </table>
-    <? } else {
+    <?php } else {
         echo 'No Users created';
     } ?>
     <div class="row">
@@ -48,7 +46,7 @@ if ($allUsers){
         window.location.href = '/admin';
     });
 </script>
-<?
+<?php
 include($_SERVER['DOCUMENT_ROOT'] . '/common/footer.php');
 $votingDb->close();
 ?>

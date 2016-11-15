@@ -6,7 +6,7 @@ $allBeers = $result->fetch_all();
 ?>
 
     <form id="beerAction" method="post" action="beer/edit/index.php">
-        <?
+        <?php
         if ($allBeers){
         ?>
         <div class="container data-grid table-responsive">
@@ -32,19 +32,19 @@ $allBeers = $result->fetch_all();
                     }
                     ?>
                     <tr>
-                        <td><? echo $beer[0] ?></td>
-                        <td><img src="<? echo $image_src; ?>" class='img-thumbnail' id="<? echo $id ?>" height="150"
+                        <td><?php echo $beer[0] ?></td>
+                        <td><img src="<?php echo $image_src; ?>" class='img-thumbnail' id="<?php echo $id ?>" height="150"
                                  width="150"/></td>
-                        <td><? echo $beer[1] ?></td>
-                        <td><? echo $beer[2] ?></td>
-                        <td><? echo $votes; ?></td>
-                        <td><a href="beer/delete" class="deleteBeer" id="delete_<? echo $id ?>">delete</a> | <a href="beer/edit/<? echo $id ?>" class="editBeer" id="edit_<? echo $id ?>">edit</a>
+                        <td><?php echo $beer[1] ?></td>
+                        <td><?php echo $beer[2] ?></td>
+                        <td><?php echo $votes; ?></td>
+                        <td><a href="beer/delete" class="deleteBeer" id="delete_<?php echo $id ?>">delete</a> | <a href="beer/edit/<?php echo $id ?>" class="editBeer" id="edit_<?php echo $id ?>">edit</a>
                         </td>
                     </tr>
-                <? } ?>
+                <?php } ?>
                 </tbody>
             </table>
-            <? } else {
+            <?php } else {
                 echo 'No Beers yet!!!';
             } ?>
             <div class="row">
@@ -83,7 +83,7 @@ $allBeers = $result->fetch_all();
             window.location.href = '/admin';
         });
     </script>
-<?
+<?php
 include($_SERVER['DOCUMENT_ROOT'] . '/common/footer.php');
 $votingDb->close();
 ?>

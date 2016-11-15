@@ -8,7 +8,7 @@ include_once ('common/header.php');
 <div class="container homepage">
     <h1>Vote for your favourite beer</h1>
     <p>
-    <img src="<? echo ROOT_IMAGE ?>beer.png" class="img-thumbnail img-circle"/>
+    <img src="<?php echo ROOT_IMAGE ?>beer.png" class="img-thumbnail img-circle"/>
     </p>
     <div id="clockdiv">
         <div>
@@ -33,12 +33,12 @@ include_once ('common/header.php');
     var deadline = new Date(dateEndDate);
     initializeClock('clockdiv', deadline);
 </script>
-<?
+<?php
 if(!$_SESSION['loggedin'] || $_COOKIE['id_token'])
 {?>
     <h3><a href="login/index.php" class="TrHover homepage">Login to vote for your favourite beer</a></h3></div>
-<?}
+<?php}
 else{?>
     <h3><a href="vote" class="TrHover homepage">Vote for your favourite beer</a></h3></div>
-<?}
+<?php}
 ?>

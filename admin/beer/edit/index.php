@@ -1,20 +1,20 @@
-<?
+<?php
 include($_SERVER['DOCUMENT_ROOT'] . '/common/header.php');
 $beer_id= $_POST['selectedbeerId'];
 $beer = getBeerById($votingDb, $beer_id);
 ?>
     <form id="createBeer" method="post" enctype="multipart/form-data" action="../saveBeer.php">
-        <input name="beer_id" id="beer_id" value="<? echo $beer_id; ?>" class="hidden"/>
+        <input name="beer_id" id="beer_id" value="<?php echo $beer_id; ?>" class="hidden"/>
         <div class="container">
             <fieldset>
                 <legend>Beer Detail</legend>
                 <div class="row">
                     <div class="col-sm-4"><label>Name of the Beer</label></div>
-                    <div class="col-sm-8"><input type="text" name="beerName" class="inputClass" value="<? echo $beer[1] ?>" required/></div>
+                    <div class="col-sm-8"><input type="text" name="beerName" class="inputClass" value="<?php echo $beer[1] ?>" required/></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4"><label>Description</label></div>
-                    <div class="col-sm-8"><input type="text" name="beerDescription" class="inputClass" value="<? echo $beer[2] ?>" required/></div>
+                    <div class="col-sm-8"><input type="text" name="beerDescription" class="inputClass" value="<?php echo $beer[2] ?>" required/></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4"><label>Select image to upload:</label></div>
@@ -36,6 +36,6 @@ $beer = getBeerById($votingDb, $beer_id);
             $('#createBeer').submit();
         });
     </script>
-<?
+<?php
 include($_SERVER['DOCUMENT_ROOT'] . '/common/footer.php');
 ?>
