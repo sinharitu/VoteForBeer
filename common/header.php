@@ -15,6 +15,7 @@ $time = getCountDownDate($votingDb);
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="http://localhost:8888/assets/js/countdown.js"></script>
     <script src="http://localhost:8888/assets/js/pwdwidget.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
     <script src="http://localhost:8888/assets/js/validator.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
